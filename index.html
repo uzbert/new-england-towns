@@ -149,6 +149,9 @@ sup.s a:hover{text-decoration:underline}
 .pick{border:2px solid var(--accent);border-radius:6px;padding:24px 26px;background:#fff;position:relative}
 .pick .badge{position:absolute;top:-13px;left:22px;background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:3px 12px;border-radius:999px}
 .pick h3{font-size:1.9rem;margin-bottom:4px}
+.pick h3 a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:5px;text-decoration-color:var(--accent)}
+.pick h3 a:hover{text-decoration-thickness:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .pick .kind{color:var(--smoke);font-size:.95rem;margin-bottom:12px}
 .pick ul{margin:0 0 12px;padding-left:20px}
 .pick li{margin-bottom:5px;font-size:.98rem}
@@ -409,7 +412,7 @@ const TOWNS = [
     {t:"I could not confirm any 2026 holiday dates. The Winterland date is an expectation from earlier years.", s:[6]}
   ],
   stay:{
-    name:"The Whitlock", kind:"Historic inn in the center of town",
+    name:"The Whitlock", url:"https://thewhitlocklenox.com/", kind:"Historic inn in the center of town",
     why:["In the middle of Lenox, so you can walk to dinner, shops and the tree lighting.", "Home to Ophelia’s restaurant, which has live music and a firepit in a landscaped seating area.", "It is one of three refreshed historic inns; The Hotel Guru lists it among the best places to stay in central Lenox."],
     caution:"The Whitlock was formerly the Church Street Inn and reopened under new management in 2022. Older reviews may describe a different place.",
     src:[3,7],
@@ -468,7 +471,7 @@ const TOWNS = [
     {t:"The dates come from one local news listing, so confirm them with the Stockbridge Chamber of Commerce.", s:[0]}
   ],
   stay:{
-    name:"The Red Lion Inn", kind:"Historic inn on Main Street, welcoming guests since 1773",
+    name:"The Red Lion Inn", url:"https://www.redlioninn.com/", kind:"Historic inn on Main Street, welcoming guests since 1773",
     why:["It is the building in the Rockwell painting, and the inn’s porch is the stage for Saturday’s caroling.", "Open year-round and decorated for Christmas, with fires in the lobby and a Christmas food booth during the event.", "You can walk to the museum, the shops and the reenactment without a car."],
     caution:"The Red Lion is a large, rambling inn rather than an intimate B&B. If you want a small place, stay five minutes away in Lenox and drive over for the event.",
     src:[4,2,1],
@@ -585,7 +588,7 @@ const TOWNS = [
     {t:"Winter storms are occasional, and the beaches are for walking only.", s:[]}
   ],
   stay:{
-    name:"Kennebunkport Inn", kind:"Victorian mansion turned inn, steps from Dock Square",
+    name:"Kennebunkport Inn", url:"https://kennebunkportinn.com/", kind:"Victorian mansion turned inn, steps from Dock Square",
     why:["Dock Square is a one-minute walk, and the inn is open year-round with good off-season rates.", "A cozy three-story Victorian that began as a private mansion, named among Oyster’s coziest New England inns.", "Its Christmas season is described as lively and beautifully decorated."],
     caution:"The inn’s restaurant and bar may only run on weekends in the off-season. Dock Square has plenty of other places to eat, but check which ones are open.",
     src:[5,6],
@@ -651,7 +654,7 @@ const TOWNS = [
     {t:"Off-season hours vary across the Cape, so confirm what is open.", s:[11]}
   ],
   stay:{
-    name:"Captain’s House Inn", kind:"1839 Greek Revival inn on two acres of gardens",
+    name:"Captain’s House Inn", url:"https://www.captainshouseinn.com/", kind:"1839 Greek Revival inn on two acres of gardens",
     why:["Open year-round, and a member of Select Registry. Reviewers have called it perhaps Cape Cod’s finest bed and breakfast.", "Includes a gourmet breakfast, afternoon tea and evening snacks, and rates 9.8 out of 10 on Expedia across more than 200 reviews.", "Quiet, residential setting about half a mile from the fish pier."],
     caution:"No guests under 10, and it is not on the waterfront. Rooms start around $329 in one listing, and holiday weekends will cost more.",
     src:[6,5,7,13],
@@ -943,7 +946,7 @@ function townHTML(t){
           <div role="tabpanel" id="pan-${t.id}-2" aria-labelledby="tab-${t.id}-2" hidden>
             <div class="pick">
               <span class="badge">Best fit</span>
-              <h3>${esc(t.stay.name)}</h3>
+              <h3>${t.stay.url ? `<a href="${esc(t.stay.url)}" target="_blank" rel="noopener">${esc(t.stay.name)}<span class="sr"> (opens the inn’s website)</span></a>` : esc(t.stay.name)}</h3>
               <div class="kind">${esc(t.stay.kind)}${cites(t,t.stay.src)}</div>
               <ul>${stayWhy}</ul>
               <div class="caution">${esc(t.stay.caution)}</div>
