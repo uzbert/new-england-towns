@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Six small towns, one December weekend</title>
+<title>New England Long Weekend Research</title>
 <meta name="description" content="Wickford, Lenox, Stockbridge, Great Barrington, Kennebunkport and Chatham compared for an early-December getaway: pros and cons, where to stay, things to do, and sources.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%81%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,7 @@ p{margin:0 0 1em}
 .dots a:hover span,.dots a:focus-visible span{opacity:1;transform:none}
 .topbar{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:12px 24px;pointer-events:none}
 .topbar > *{pointer-events:auto}
+.topbar .btn{margin-left:auto}
 .brand{font-family:var(--display);font-size:20px;color:var(--paper);mix-blend-mode:difference;text-decoration:none}
 .btn{font:600 14px var(--body);border:1.5px solid currentColor;background:transparent;color:inherit;padding:8px 16px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
 .btn:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
@@ -221,7 +222,6 @@ body.present .topbar .brand{opacity:.0}
 <noscript><p style="padding:24px;background:#fff">This presentation needs JavaScript to show town details. The towns are Wickford, Lenox, Stockbridge, Great Barrington, Kennebunkport and Chatham.</p></noscript>
 
 <header class="topbar">
-  <a class="brand" href="#top">Six towns</a>
   <button class="btn" id="presentBtn" type="button" aria-pressed="false">Start presenting</button>
 </header>
 <nav class="dots" id="dots" aria-label="Slides"></nav>
@@ -232,7 +232,7 @@ body.present .topbar .brand{opacity:.0}
   <canvas id="leaves" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
-      <h1>Six small towns, one December weekend</h1>
+      <h1>New England Long Weekend Research</h1>
       <p class="lede">The first weekend of December is when New England stops being about leaves and starts looking like Christmas. These are the six towns on the shortlist, with Chatham, a week later, as the outside option. Pick one to see the pros and cons, where to stay, and things to do.</p>
       <ul class="index" id="heroIndex"></ul>
     </div>
