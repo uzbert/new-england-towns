@@ -65,7 +65,6 @@ p{margin:0 0 1em}
 .panel .ph.on{opacity:1}
 .panel .ph img{width:100%;height:100%;object-fit:cover}
 .panel .ph .fallback{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:clamp(5rem,12vw,9rem);color:rgba(235,232,222,.9)}
-.panel .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 12px;font-size:12.5px;color:rgba(235,232,222,.88);background:linear-gradient(transparent,rgba(0,0,0,.7))}
 .scrollcue{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);font-size:13px;color:var(--lichen);text-decoration:none}
 
 /* ---------- generic slide ---------- */
@@ -305,7 +304,7 @@ body.present .topbar .brand{opacity:.0}
 /* =====================================================================
    DATA
    Edit text here. To use your own photos, add file paths to customImages,
-   for example: customImages: [{src:"images/lenox1.jpg", credit:"Your photo"}]
+   for example: customImages: [{src:"images/lenox.jpg"}]
    ===================================================================== */
 const TOWNS = [
 {
@@ -316,8 +315,7 @@ const TOWNS = [
   weekendShort:"Early Dec (expected)",
   drive:"About 2.5 to 3 hours", driveShort:"≈2.5–3 hrs",
   feel:"Sleepy, walkable, and small enough to see in an afternoon.",
-  commons:{cats:["Wickford, Rhode Island","Wickford Village Historic District"], q:"\"Wickford\" Rhode Island", hint:/wickford|smith.?s castle|north kingstown/i},
-  customImages:[{src:"images/wickford.jpg", credit:""}],
+  customImages:[{src:"images/wickford.jpg"}],
   sources:[
     {t:"Boston Globe: Six perfect New England towns for a fall getaway", u:"https://www.bostonglobe.com/2022/09/08/magazine/six-perfect-new-england-towns-fall-getaway"},
     {t:"WorldAtlas: Rhode Island’s most festive downtowns for the holidays", u:"https://www.worldatlas.com/cities/rhode-island-s-6-most-festive-downtowns-for-the-holidays.html"},
@@ -377,8 +375,7 @@ const TOWNS = [
   weekendShort:"Dec 4 (expected)",
   drive:"About 3 hours", driveShort:"≈3 hrs",
   feel:"Elegant and polished, with a real downtown to walk around.",
-  commons:{cats:["Lenox, Massachusetts"], q:"\"Lenox, Massachusetts\"", hint:/lenox|berkshire|wheatleigh|tanglewood|the mount/i},
-  customImages:[{src:"images/lenox.jpg", credit:""}],
+  customImages:[{src:"images/lenox.jpg"}],
   sources:[
     {t:"Boston.com: Where to go leaf peeping in New England", u:"https://www.boston.com/travel/fall-foliage/2022/09/13/where-to-go-leaf-peeping-in-new-england/"},
     {t:"Berkshire Macaroni KID: Winterland and tree lighting, Lenox (2024)", u:"https://berkshires.macaronikid.com/events/673bf2bc25ed8110b9635966/winterland-and-tree-lighting-(lenox-)---"},
@@ -437,8 +434,7 @@ const TOWNS = [
   weekendShort:"Dec 4–6",
   drive:"About 2.75 hours", driveShort:"≈2.75 hrs",
   feel:"Tiny, storybook, and busiest on its one big weekend.",
-  commons:{cats:["Stockbridge, Massachusetts"], q:"\"Stockbridge, Massachusetts\"", hint:/stockbridge|red lion|rockwell|main street/i},
-  customImages:[{src:"images/stockbridge.jpg", credit:""}],
+  customImages:[{src:"images/stockbridge.jpg"}],
   sources:[
     {t:"The Berkshire Edge: 26th annual Stockbridge Main Street at Christmas, Dec 4–6", u:"https://theberkshireedge.com/?p=25918"},
     {t:"The Berkshire Edge: Bits & Bytes (carolers, Pocket Lady, Santa’s Workshop)", u:"https://theberkshireedge.com/?p=95316"},
@@ -492,8 +488,7 @@ const TOWNS = [
   weekendShort:"Base for Dec 4–6",
   drive:"About 2.5 hours", driveShort:"≈2.5 hrs",
   feel:"Livelier than the others, with enough going on for a long weekend.",
-  commons:{cats:["Great Barrington, Massachusetts"], q:"\"Great Barrington\" Massachusetts", hint:/great barrington|monument mountain|mahaiwe|railroad street/i},
-  customImages:[{src:"images/great-barrington.jpg", credit:""}],
+  customImages:[{src:"images/great-barrington.jpg"}],
   sources:[
     {t:"WorldAtlas: 11 best New England towns for a weekend trip", u:"https://www.worldatlas.com/cities/11-best-new-england-towns-for-a-weekend-trip.html"},
     {t:"Kayak: Wainwright Inn, Great Barrington", u:"https://www.kayak.com/Great-Barrington-Hotels-Wainwright-Inn.111700.ksp"},
@@ -548,8 +543,7 @@ const TOWNS = [
   weekendShort:"Dec 3–13",
   drive:"About 5 hours or more", driveShort:"≈5+ hrs",
   feel:"A postcard harbor town that dials its holiday cheer up to the maximum.",
-  commons:{cats:["Kennebunkport, Maine"], q:"\"Kennebunkport\"", hint:/kennebunkport|dock square|cape porpoise|goose rocks|walker/i},
-  customImages:[{src:"images/kennebunkport.jpg", credit:""}],
+  customImages:[{src:"images/kennebunkport.jpg"}],
   sources:[
     {t:"Kennebunkport Resort Collection: Christmas Prelude 2026", u:"https://www.kennebunkportresortcollection.com/christmas-prelude"},
     {t:"Christmas Prelude (official site)", u:"https://christmasprelude.com"},
@@ -613,8 +607,7 @@ const TOWNS = [
   weekendShort:"Dec 11–13",
   drive:"About 4.5 hours or more", driveShort:"≈4.5 hrs",
   feel:"Refined and quiet, with the Cape’s off-season calm.",
-  commons:{cats:["Chatham, Massachusetts"], q:"\"Chatham, Massachusetts\"", hint:/chatham|lighthouse|monomoy|fish pier|cape cod/i},
-  customImages:[{src:"images/chatham.jpg", credit:""}],
+  customImages:[{src:"images/chatham.jpg"}],
   sources:[
     {t:"Chatham Info: Downtown Chatham and the 2026 events calendar", u:"https://www.chathaminfo.com/2025/01/01/downtown-chatham-ma/"},
     {t:"Chatham Info: Christmas by the Sea", u:"https://www.chathaminfo.com/2024/08/26/christmas-by-the-sea/"},
@@ -712,106 +705,10 @@ function cites(town, idx){
 }
 
 /* =====================================================================
-   PHOTOS: Wikimedia Commons (freely licensed), loaded live
+   PHOTOS: one picture per town, from the images folder
    ===================================================================== */
-const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
-const BAD_NAME = /(map|seal|flag|logo|locator|coat.of.arms|diagram|plan\b|chart|blank|montage|banner|icon|sign\b|plaque|poster|stamp|postcard|panorama stitched)/i;
-const OLD_NAME = /\b1[0-8]\d\d\b|\b19[0-4]\d\b/;
-
-function textOnly(html){
-  if(!html) return "";
-  const d = new DOMParser().parseFromString(String(html), "text/html");
-  return (d.body.textContent || "").replace(/\s+/g," ").trim();
-}
-
-function normalizePages(json, hint){
-  const pages = json && json.query && json.query.pages ? Object.values(json.query.pages) : [];
-  const out = [];
-  for(const p of pages){
-    const ii = p.imageinfo && p.imageinfo[0];
-    if(!ii || !p.title) continue;
-    if(ii.mime !== "image/jpeg") continue;
-    const w = ii.thumbwidth || ii.width, h = ii.thumbheight || ii.height;
-    if(!w || !h || ii.width < 1000) continue;
-    const ratio = ii.width / ii.height;
-    if(ratio < 1.2 || ratio > 2.6) continue;
-    const name = p.title.replace(/^File:/i,"").replace(/\.[a-z]+$/i,"");
-    if(BAD_NAME.test(name) || OLD_NAME.test(name)) continue;
-    const src = ii.thumburl || ii.url;
-    const page = ii.descriptionurl || "";
-    if(!/^https:\/\//.test(src)) continue;
-    const md = ii.extmetadata || {};
-    out.push({
-      src, page: /^https:\/\//.test(page) ? page : "",
-      title: name.replace(/_/g," "),
-      artist: textOnly(md.Artist && md.Artist.value) || "Unknown author",
-      license: textOnly(md.LicenseShortName && md.LicenseShortName.value) || "See license page",
-      score: ii.width + (hint && hint.test(name) ? 4000 : 0)
-    });
-  }
-  out.sort((a,b) => b.score - a.score);
-  const seen = new Set();
-  return out.filter(o => !seen.has(o.title) && seen.add(o.title)).slice(0,7);
-}
-
-async function commonsCall(extra){
-  const u = new URL(COMMONS_API);
-  const params = Object.assign({
-    action:"query", format:"json", origin:"*", prop:"imageinfo",
-    iiprop:"url|size|mime|extmetadata", iiurlwidth:"1600",
-    iiextmetadatafilter:"Artist|LicenseShortName"
-  }, extra);
-  Object.keys(params).forEach(k => u.searchParams.set(k, params[k]));
-  const ctrl = new AbortController();
-  const timer = setTimeout(() => ctrl.abort(), 12000);
-  try{
-    const r = await fetch(u.toString(), {signal: ctrl.signal});
-    if(!r.ok) throw new Error("HTTP " + r.status);
-    return await r.json();
-  } finally { clearTimeout(timer); }
-}
-
-const photoCache = {};
 function loadPhotos(town){
-  if(photoCache[town.id]) return photoCache[town.id];
-  photoCache[town.id] = (async () => {
-    if(town.noPhoto) return [];
-    if(town.customImages && town.customImages.length){
-      return town.customImages.map(c => ({src:c.src, page:c.page||"", title:town.name, artist:c.credit||"", license:"", own:true}));
-    }
-    const key = "photos:v1:" + town.id;
-    try{
-      const cached = sessionStorage.getItem(key);
-      if(cached){ const arr = JSON.parse(cached); if(arr && arr.length) return arr; }
-    }catch(e){}
-    let list = [];
-    for(const cat of town.commons.cats){
-      try{
-        const j = await commonsCall({generator:"categorymembers", gcmtitle:"Category:" + cat, gcmtype:"file", gcmlimit:"60"});
-        list = normalizePages(j, town.commons.hint);
-        if(list.length >= 4) break;
-      }catch(e){ /* try the next source */ }
-    }
-    if(list.length < 4){
-      try{
-        const j = await commonsCall({generator:"search", gsrsearch: town.commons.q + " filetype:bitmap", gsrnamespace:"6", gsrlimit:"40"});
-        const more = normalizePages(j, town.commons.hint);
-        const seen = new Set(list.map(l => l.title));
-        more.forEach(m => { if(!seen.has(m.title)) list.push(m); });
-      }catch(e){}
-    }
-    list = list.slice(0,7);
-    try{ sessionStorage.setItem(key, JSON.stringify(list)); }catch(e){}
-    return list;
-  })();
-  return photoCache[town.id];
-}
-
-function creditHTML(p){
-  if(!p) return "";
-  if(p.own) return esc(p.artist || "");
-  const link = p.page ? `<a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title);
-  return `Photo: ${link} by ${esc(p.artist)}. ${esc(p.license)}, via Wikimedia Commons.`;
+  return Promise.resolve((town.customImages || []).map(c => ({src:c.src})));
 }
 
 /* =====================================================================
@@ -827,7 +724,6 @@ function buildHero(){
   panel.innerHTML = TOWNS.map((t,i) => `
     <div class="ph${i===0?" on":""}" data-town="${t.id}" style="background:linear-gradient(150deg,${t.accent},#1d171b)">
       <div class="fallback" aria-hidden="true">${esc(t.name.charAt(0))}</div>
-      <div class="cap"></div>
     </div>`).join("");
   function show(id){
     $$(".ph", panel).forEach(p => p.classList.toggle("on", p.dataset.town === id));
@@ -844,7 +740,6 @@ function buildHero(){
     img.onload = () => {
       $(".fallback", ph).remove();
       ph.insertBefore(img, ph.firstChild);
-      $(".cap", ph).innerHTML = creditHTML(list[0]);
     };
     img.src = list[0].src;
   }).catch(() => {}));
