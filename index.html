@@ -310,8 +310,7 @@ body.present .topbar .brand{opacity:.0}
       <div>
         <h3>About the photos and the numbers</h3>
         <ul>
-          <li>Photos load live from Wikimedia Commons, which hosts freely licensed images. Each one is credited beneath it, with a link to its license page.</li>
-          <li>If a photo doesn’t load, the page shows a color panel instead. You can add your own pictures in the <code>customImages</code> list at the top of the script.</li>
+          <li>Each town has one photo, stored in the <code>images</code> folder. A town without a photo shows a color panel.</li>
           <li>Drive times are rough estimates from New York City and are not from the sources.</li>
           <li>Superscript numbers after a claim link to the page that supports it. The full list sits under “Sources” on each town.</li>
         </ul>
@@ -340,7 +339,7 @@ const TOWNS = [
   thanksgiving:"Quiet. The lights come on the following weekend. Warren, a drive away, held a holiday festival the weekend after Thanksgiving last year.",
   summary:"Wickford is a village inside North Kingstown, across Narragansett Bay from Newport. Its broad Main Street slopes to a protected harbor, and the whole historic center is preserved. It is the best fit if “sleepy but alive” is the brief, and the weakest if you want a charming inn in the village itself.",
   commons:{cats:["Wickford, Rhode Island","Wickford Village Historic District"], q:"\"Wickford\" Rhode Island", hint:/wickford|smith.?s castle|north kingstown/i},
-  customImages:[],
+  customImages:[{src:"images/wickford.jpg", credit:""}],
   sources:[
     {t:"Boston Globe: Six perfect New England towns for a fall getaway", u:"https://www.bostonglobe.com/2022/09/08/magazine/six-perfect-new-england-towns-fall-getaway"},
     {t:"WorldAtlas: Rhode Island’s most festive downtowns for the holidays", u:"https://www.worldatlas.com/cities/rhode-island-s-6-most-festive-downtowns-for-the-holidays.html"},
@@ -402,7 +401,7 @@ const TOWNS = [
   thanksgiving:"Calm. The one listing I found near Thanksgiving is a church holiday craft fair on November 21.",
   summary:"Lenox is the Berkshires at their most polished: Gilded Age mansions, a compact village, and inns ranging from a restored B&B to a five-star estate. Its famous draw, Tanglewood, is a summer festival, so late fall suits people who come for the inns, the dining, and a slower walk.",
   commons:{cats:["Lenox, Massachusetts"], q:"\"Lenox, Massachusetts\"", hint:/lenox|berkshire|wheatleigh|tanglewood|the mount/i},
-  customImages:[],
+  customImages:[{src:"images/lenox.jpg", credit:""}],
   sources:[
     {t:"Boston.com: Where to go leaf peeping in New England", u:"https://www.boston.com/travel/fall-foliage/2022/09/13/where-to-go-leaf-peeping-in-new-england/"},
     {t:"Berkshire Macaroni KID: Winterland and tree lighting, Lenox (2024)", u:"https://berkshires.macaronikid.com/events/673bf2bc25ed8110b9635966/winterland-and-tree-lighting-(lenox-)---"},
@@ -465,7 +464,7 @@ const TOWNS = [
   thanksgiving:"Quiet. The Holiday Tree Walk on Main Street starts December 1 in the sources I found.",
   summary:"Fewer than 2,000 people live in Stockbridge, and its Main Street is one of the best-known in America because Norman Rockwell painted it at Christmas in 1967. Each December the town recreates the painting, with vintage cars lined up on a closed street. It is the strongest holiday story on this list and the smallest town.",
   commons:{cats:["Stockbridge, Massachusetts"], q:"\"Stockbridge, Massachusetts\"", hint:/stockbridge|red lion|rockwell|main street/i},
-  customImages:[],
+  customImages:[{src:"images/stockbridge.jpg", credit:""}],
   sources:[
     {t:"The Berkshire Edge: 26th annual Stockbridge Main Street at Christmas, Dec 4–6", u:"https://theberkshireedge.com/?p=25918"},
     {t:"The Berkshire Edge: Bits & Bytes (carolers, Pocket Lady, Santa’s Workshop)", u:"https://theberkshireedge.com/?p=95316"},
@@ -522,7 +521,7 @@ const TOWNS = [
   thanksgiving:"A good Thanksgiving-weekend base since it has theater, a cinema, a diner and trails even without a festival.",
   summary:"Great Barrington is the largest town on the list and the one that feels most like a place people live. Railroad Street has independent shops and restaurants, the Mahaiwe theater books live shows year-round, and Monument Mountain and Ski Butternut are a few minutes away. It is the best choice if you would rather have things to do than a single festival.",
   commons:{cats:["Great Barrington, Massachusetts"], q:"\"Great Barrington\" Massachusetts", hint:/great barrington|monument mountain|mahaiwe|railroad street/i},
-  customImages:[],
+  customImages:[{src:"images/great-barrington.jpg", credit:""}],
   sources:[
     {t:"WorldAtlas: 11 best New England towns for a weekend trip", u:"https://www.worldatlas.com/cities/11-best-new-england-towns-for-a-weekend-trip.html"},
     {t:"Kayak: Wainwright Inn, Great Barrington", u:"https://www.kayak.com/Great-Barrington-Hotels-Wainwright-Inn.111700.ksp"},
@@ -580,7 +579,7 @@ const TOWNS = [
   thanksgiving:"Quiet. Prelude preparations begin to appear around Dock Square in late November, and the Cape Porpoise Lobster Trap Tree takes shape.",
   summary:"Kennebunkport is one of your two original picks, and its holiday case is the most developed of the six. The Christmas Prelude runs for eleven days, with Santa arriving by lobster boat, trolley rides, parades and tree lightings. The price is distance and off-season closures.",
   commons:{cats:["Kennebunkport, Maine"], q:"\"Kennebunkport\"", hint:/kennebunkport|dock square|cape porpoise|goose rocks|walker/i},
-  customImages:[],
+  customImages:[], noPhoto:true,
   sources:[
     {t:"Kennebunkport Resort Collection: Christmas Prelude 2026", u:"https://www.kennebunkportresortcollection.com/christmas-prelude"},
     {t:"Christmas Prelude (official site)", u:"https://christmasprelude.com"},
@@ -648,7 +647,7 @@ const TOWNS = [
   thanksgiving:"A good Thanksgiving trip if you do not need a festival. Chatham’s Turkey Trot sets off at 8 a.m. Thursday, and a 10K runs the Sunday before.",
   summary:"Chatham sits at the elbow of Cape Cod, with a Main Street that runs from Kate Gould Park to the lighthouse and fish pier. In fall the Cape has mild weather and fewer people, and in mid-December the village does a full Christmas stroll. It is the most expensive of the six and the latest on the calendar.",
   commons:{cats:["Chatham, Massachusetts"], q:"\"Chatham, Massachusetts\"", hint:/chatham|lighthouse|monomoy|fish pier|cape cod/i},
-  customImages:[],
+  customImages:[{src:"images/chatham.jpg", credit:""}],
   sources:[
     {t:"Chatham Info: Downtown Chatham and the 2026 events calendar", u:"https://www.chathaminfo.com/2025/01/01/downtown-chatham-ma/"},
     {t:"Chatham Info: Christmas by the Sea", u:"https://www.chathaminfo.com/2024/08/26/christmas-by-the-sea/"},
@@ -810,6 +809,7 @@ const photoCache = {};
 function loadPhotos(town){
   if(photoCache[town.id]) return photoCache[town.id];
   photoCache[town.id] = (async () => {
+    if(town.noPhoto) return [];
     if(town.customImages && town.customImages.length){
       return town.customImages.map(c => ({src:c.src, page:c.page||"", title:town.name, artist:c.credit||"", license:"", own:true}));
     }
@@ -843,7 +843,7 @@ function loadPhotos(town){
 
 function creditHTML(p){
   if(!p) return "";
-  if(p.own) return esc(p.artist || "Photo supplied by you");
+  if(p.own) return esc(p.artist || "");
   const link = p.page ? `<a href="${esc(p.page)}" target="_blank" rel="noopener">${esc(p.title)}</a>` : esc(p.title);
   return `Photo: ${link} by ${esc(p.artist)}. ${esc(p.license)}, via Wikimedia Commons.`;
 }
@@ -947,7 +947,7 @@ function townHTML(t){
       <div class="cols">
         <div class="gallery">
           <div class="stage" id="stage-${t.id}">
-            <div class="fallback"><div><b>${esc(t.name)}</b><span>Photos load from Wikimedia Commons.</span></div></div>
+            <div class="fallback"><div><b>${esc(t.name)}</b><span>Photo coming soon.</span></div></div>
             <div class="gnav" hidden><button type="button" aria-label="Previous photo" data-dir="-1">&#8249;</button><button type="button" aria-label="Next photo" data-dir="1">&#8250;</button></div>
           </div>
           <div class="credit" id="credit-${t.id}"></div>
@@ -1047,11 +1047,11 @@ function initGallery(t){
     function done(){
       if(--pending > 0) return;
       const good = ok.filter(Boolean);
-      if(!good.length){ credit.textContent = "Photos could not be loaded, so a color panel is shown. See the notes on custom images."; return; }
+      if(!good.length){ credit.textContent = ""; return; }
       list = good.map(g => g.p); imgs = good.map(g => g.im);
       $(".fallback", stage) && $(".fallback", stage).remove();
       imgs.forEach(im => stage.insertBefore(im, nav));
-      thumbs.innerHTML = list.map((p,j) => `<button type="button" aria-label="Show photo ${j+1}" data-i="${j}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("");
+      thumbs.innerHTML = list.length < 2 ? "" : list.map((p,j) => `<button type="button" aria-label="Show photo ${j+1}" data-i="${j}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("");
       $$("button", thumbs).forEach(b => b.addEventListener("click", () => { stop(); go(+b.dataset.i); }));
       nav.hidden = list.length < 2;
       go(0); play();
@@ -1064,7 +1064,7 @@ function initGallery(t){
   const io = new IntersectionObserver(es => es.forEach(e => {
     if(e.isIntersecting && !started){
       started = true;
-      loadPhotos(t).then(items => { if(items.length) render(items); else credit.textContent = "No freely licensed photos were found for this town."; })
+      loadPhotos(t).then(items => { if(items.length) render(items); else credit.textContent = ""; })
         .catch(() => { credit.textContent = "Photos could not be loaded right now."; });
     }
     if(started){ e.isIntersecting ? play() : stop(); }
