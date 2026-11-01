@@ -291,7 +291,7 @@ body.present .topbar .brand{opacity:.0}
           <li>Exact 2026 dates for Wickford’s Festival of Lights and Lenox’s Winterland. Both ran on the first weekend of December in earlier years.</li>
           <li>The Wainwright Inn in Great Barrington appeared in a real-estate listing at some point. Check that it is open.</li>
           <li>Lenox’s Whitlock and Dewey inns changed names and management in 2022, so older reviews may describe different places.</li>
-          <li>Wickford has little lodging in the village. The Hamilton Village Inn information comes from a 2022 article.</li>
+          <li>Wickford has no inn in the village. The Sunflower House is an Airbnb, so confirm Dec 4–7 availability and the total price. The Hamilton Village Inn information comes from a 2022 article.</li>
           <li>Winter hours for restaurants in Kennebunkport and Chatham. Call before you plan a dinner around any one place.</li>
           <li>Prices. Rates shown in sources were from other seasons, so I left them out or marked them as approximate.</li>
         </ul>
@@ -338,7 +338,8 @@ const TOWNS = [
     {t:"Trip.com: Wickford Motor Inn", u:"https://www.trip.com/t/l1VbIawrKU2"},
     {t:"Boston Globe (Sept. 2026): Two under-the-radar fall escapes, including Warren", u:"https://www.bostonglobe.com/2026/09/18/lifestyle/under-the-radar-fall-escapes-new-england/"},
     {t:"WBSM: Newport mansions Christmas events guide", u:"https://wbsm.com/newport-mansions-christmas-events-guide/"},
-    {t:"Macaroni KID: Holiday family fun around Rhode Island", u:"https://washingtonri.preview.macaronikid.com/articles/69170bba5b328f2df9e9fc6d/holiday-family-fun-around-rhode-island"}
+    {t:"Macaroni KID: Holiday family fun around Rhode Island", u:"https://washingtonri.preview.macaronikid.com/articles/69170bba5b328f2df9e9fc6d/holiday-family-fun-around-rhode-island"},
+    {t:"Airbnb: The Sunflower House Lovely One Bedroom, Wickford", u:"https://www.airbnb.com/rooms/53876546"}
   ],
   pros:[
     {t:"One of the oldest preserved Colonial villages in the country, and the entire village is on the National Register of Historic Places.", s:[0]},
@@ -348,16 +349,17 @@ const TOWNS = [
     {t:"Warren’s artist-and-restaurant scene is a day trip away, and Newport’s mansion holidays run Nov 21 to Jan 3.", s:[8,9]}
   ],
   cons:[
-    {t:"There is almost no lodging in the village. The Globe’s recommended stay was a motel-style inn about 1½ miles away.", s:[0]},
+    {t:"There are almost no inns in the village. The Globe’s recommended stay was a motel-style inn about 1½ miles away, and the best fit here is a rental.", s:[0]},
     {t:"The guides name only a handful of restaurants, so this is a village for strolling more than for a food weekend.", s:[0]},
     {t:"Smith’s Castle tours run only Friday through Sunday, so winter hours need checking.", s:[0]}
   ],
   stay:{
-    name:"Hamilton Village Inn", kind:"Motel-style inn, about 1½ miles from the village",
-    why:["The only lodging the Globe’s Wickford write-up recommends, with clean rooms from around $115 in 2022.", "Close enough to drive to Main Street in minutes and walk the village once you arrive."],
-    caution:"This is the weak spot of Wickford. The pick is practical, not cozy. For the charm you described, look for a rented cottage in the village. Listings near the harbor, including a cottage a block from the water, do exist.",
-    src:[0,6],
+    name:"The Sunflower House", url:"https://www.airbnb.com/rooms/53876546?adults=1&check_in=2026-12-04&check_out=2026-12-07", kind:"Airbnb: entire one-bedroom unit in Wickford Village, sleeps 2",
+    why:["Listed as in the heart of Wickford Village, with shops, cafes and restaurants right outside, so you can walk everywhere.", "A harbor view, shared beach access, a full kitchen, garden seating and free parking.", "Rated 4.94 out of 5 from 98 reviews, a Guest favorite with a Superhost."],
+    caution:"This is an Airbnb, not an inn, and it sleeps two. Details come from the listing page, so confirm that Dec 4–7 is open and check the total price with fees before you book.",
+    src:[11],
     alts:[
+      {n:"Hamilton Village Inn", d:"A motel-style inn about 1½ miles from the village, with clean rooms from around $115 in 2022. Practical, not cozy, and you would drive to Main Street.", s:[0,6]},
       {n:"TownePlace Suites Providence North Kingstown", d:"Studios and suites with kitchens, about five minutes from the village. A hotel, not an inn, listed at $169 a night in one listing.", s:[0,6]},
       {n:"William’s Grant Inn, Bristol", d:"The Globe’s favorite six-room 1808 B&B, but it is across the bay in Bristol and best if you pair Wickford with Warren.", s:[8]}
     ]
@@ -524,7 +526,7 @@ const TOWNS = [
     {t:"It is a bigger town with a through-road, so it feels less like a storybook village than Stockbridge or Wickford.", s:[]}
   ],
   stay:{
-    name:"Wainwright Inn", kind:"1766 bed-and-breakfast, about half a mile from downtown",
+    name:"Wainwright Inn", url:"https://wainwright-inn.massachusetts-top-hotels.com/en/", kind:"1766 bed-and-breakfast, about half a mile from downtown",
     why:["Rated 9.2 out of 10 across 119 ratings on Kayak, with free parking and Wi-Fi.", "A main house with nine guest suites plus a carriage house, near Searles Castle and the Mahaiwe theater.", "A short walk from Main Street, with Monument Mountain and Ski Butternut a few miles away."],
     caution:"A real-estate listing for the inn appeared in my search, and I could not tell its date. Call before booking to confirm it is operating and who owns it.",
     src:[1,2],
