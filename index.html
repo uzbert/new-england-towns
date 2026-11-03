@@ -89,7 +89,8 @@ p{margin:0 0 1em}
 .legend{font-size:14px;color:var(--smoke);display:flex;gap:22px;flex-wrap:wrap;margin:10px 0 34px}
 .legend i{display:inline-block;width:30px;height:12px;border-radius:6px;vertical-align:-1px;margin-right:7px;background:var(--oxblood)}
 .legend i.exp{background:repeating-linear-gradient(135deg,transparent 0 5px,rgba(255,255,255,.35) 5px 7px),var(--oxblood)}
-table.glance{width:100%;border-collapse:collapse;font-size:.97rem}
+table.glance{width:100%;min-width:620px;table-layout:fixed;border-collapse:collapse;font-size:.97rem}
+table.glance th,table.glance td{width:25%}
 table.glance th{font-weight:600;text-align:left;font-size:.9rem;color:var(--smoke);padding:8px 14px 8px 0;border-bottom:2px solid var(--ink)}
 table.glance td{padding:13px 14px 13px 0;border-bottom:1px solid var(--line);vertical-align:top}
 table.glance td:first-child{font-family:var(--display);font-size:1.2rem;white-space:nowrap}
@@ -767,8 +768,8 @@ function buildOverview(){
   });
   $("#timeline").innerHTML = `<div class="tl-grid">${head}${rows}</div>`;
 
-  $("#glance").innerHTML = `<thead><tr><th>Town</th><th>Aim for</th><th>Drive from NYC</th><th>Where to stay</th><th>In one line</th></tr></thead><tbody>` +
-    TOWNS.map(t => `<tr><td><a href="#town-${t.id}">${esc(t.name)}</a></td><td>${esc(t.weekendShort)}</td><td>${esc(t.driveShort)}</td><td>${esc(t.stay.name)}</td><td>${esc(t.feel)}</td></tr>`).join("") + `</tbody>`;
+  $("#glance").innerHTML = `<thead><tr><th>Town</th><th>Aiming for</th><th>Drive from NYC</th><th>Where to stay</th></tr></thead><tbody>` +
+    TOWNS.map(t => `<tr><td><a href="#town-${t.id}">${esc(t.name)}</a></td><td>${esc(t.weekendShort)}</td><td>${esc(t.driveShort)}</td><td>${esc(t.stay.name)}</td></tr>`).join("") + `</tbody>`;
 }
 
 /* =====================================================================
