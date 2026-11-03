@@ -241,7 +241,7 @@ body.present .topbar .brand{opacity:.0}
 <!-- ============ OVERVIEW ============ -->
 <section class="slide" id="overview" data-title="Compare" aria-labelledby="ov-h">
   <div class="wrap">
-    <h2 id="ov-h">Where the weekends fall</h2>
+    <h2 id="ov-h">Possible dates, by town</h2>
     <p class="sub">Most of these towns hold their holiday events on the first weekend of December (Dec 4 to 6). Chatham, the outside option, follows on Dec 11 to 13.</p>
     <div class="tl" id="timeline" role="img" aria-label="Timeline of holiday events from November 30 to December 13, 2026"></div>
     <div class="legend"><span><i></i>Date published for 2026</span><span><i class="exp"></i>Expected from prior years</span></div>
@@ -765,8 +765,7 @@ function buildOverview(){
     const rest = TL_DAYS - (r.to + 1);
     if(rest > 0) rows += `<div style="grid-column:span ${rest}"></div>`;
   });
-  $("#timeline").innerHTML = `<div class="tl-grid">${head}${rows}</div>
-    <p class="mini" style="margin-top:8px">Dates run from Nov 30 to Dec 13. Highlighted columns are weekends.</p>`;
+  $("#timeline").innerHTML = `<div class="tl-grid">${head}${rows}</div>`;
 
   $("#glance").innerHTML = `<thead><tr><th>Town</th><th>Aim for</th><th>Drive from NYC</th><th>Where to stay</th><th>In one line</th></tr></thead><tbody>` +
     TOWNS.map(t => `<tr><td><a href="#town-${t.id}">${esc(t.name)}</a></td><td>${esc(t.weekendShort)}</td><td>${esc(t.driveShort)}</td><td>${esc(t.stay.name)}</td><td>${esc(t.feel)}</td></tr>`).join("") + `</tbody>`;
