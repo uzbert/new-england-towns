@@ -72,11 +72,6 @@ p{margin:0 0 1em}
 .slide .sub{max-width:62ch;color:var(--smoke);font-size:1.05rem}
 
 /* ---------- overview ---------- */
-.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:34px 0 46px;border-top:2px solid var(--ink)}
-.notes > div{padding:18px 26px 6px 0}
-.notes > div + div{padding-left:26px;border-left:1px solid var(--line)}
-.notes h3{font-size:1.25rem;margin-bottom:8px}
-.notes p{font-size:.98rem;color:#41373c}
 .tl{--cols:14;margin:28px 0 8px;overflow-x:auto;padding-bottom:6px}
 .tl-grid{min-width:880px;display:grid;grid-template-columns:150px repeat(var(--cols),1fr);row-gap:8px;align-items:center}
 .tl-h{font-size:11.5px;color:var(--smoke);text-align:center;border-left:1px solid var(--line);padding:2px 0}
@@ -186,21 +181,14 @@ details.src li{margin-bottom:4px;color:#41373c}
 .rrow.dim{opacity:.35}
 .dnote{margin-top:22px;font-size:.9rem;color:rgba(235,232,222,.65);max-width:60ch}
 
-/* ---------- closing ---------- */
-.closing .twocol{display:grid;grid-template-columns:1fr 1fr;gap:46px;margin-top:26px}
-.closing h3{font-size:1.5rem;margin-bottom:10px}
-.closing ul{padding-left:20px;margin:0}
-.closing li{margin-bottom:8px;font-size:.98rem}
 footer{padding:30px 0 50px;font-size:.88rem;color:var(--smoke);border-top:1px solid var(--line)}
 
 /* ---------- responsive ---------- */
 @media (max-width:980px){
-  .hero .wrap,.cols,.dgrid,.closing .twocol{grid-template-columns:1fr}
+  .hero .wrap,.cols,.dgrid{grid-template-columns:1fr}
   .panel{display:none}
   .gallery{position:static}
   .proscons{grid-template-columns:1fr}
-  .notes{grid-template-columns:1fr}
-  .notes > div + div{padding-left:0;border-left:none;border-top:1px solid var(--line);margin-top:10px;padding-top:14px}
 }
 @media (max-width:1180px){.dots{display:none}}
 @media (max-width:560px){
@@ -268,34 +256,6 @@ body.present .topbar .brand{opacity:.0}
   </div>
 </section>
 
-<!-- ============ CLOSING ============ -->
-<section class="slide closing" id="notes" data-title="Notes" aria-labelledby="cl-h">
-  <div class="wrap">
-    <h2 id="cl-h">Before you book</h2>
-    <div class="twocol">
-      <div>
-        <h3>What I could not confirm</h3>
-        <ul>
-          <li>Exact 2026 dates for Wickford’s Festival of Lights and Lenox’s Winterland. Both ran on the first weekend of December in earlier years.</li>
-          <li>The Wainwright Inn in Great Barrington appeared in a real-estate listing at some point. Check that it is open.</li>
-          <li>Lenox’s Whitlock and Dewey inns changed names and management in 2022, so older reviews may describe different places.</li>
-          <li>Wickford has no inn in the village. The Sunflower House is an Airbnb, so confirm Dec 4–7 availability and the total price. The Hamilton Village Inn information comes from a 2022 article.</li>
-          <li>Winter hours for restaurants in Kennebunkport and Chatham. Call before you plan a dinner around any one place.</li>
-          <li>Prices. Rates shown in sources were from other seasons, so I left them out or marked them as approximate.</li>
-        </ul>
-      </div>
-      <div>
-        <h3>About the photos and the numbers</h3>
-        <ul>
-          <li>Each town has one photo, stored in the <code>images</code> folder. A town without a photo shows a color panel.</li>
-          <li>Drive times are rough estimates from New York City and are not from the sources.</li>
-          <li>Superscript numbers after a claim link to the page that supports it. The full list sits under “Sources” on each town.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="wrap"><footer>Research current as of November 1, 2026. Always check opening hours and event dates before you go.</footer></div>
-</section>
 </main>
 
 <script>
@@ -512,7 +472,6 @@ const TOWNS = [
   stay:{
     name:"Wainwright Inn", url:"https://wainwright-inn.massachusetts-top-hotels.com/en/", kind:"1766 bed-and-breakfast, about half a mile from downtown",
     why:["Rated 9.2 out of 10 across 119 ratings on Kayak, with free parking and Wi-Fi.", "A main house with nine guest suites plus a carriage house, near Searles Castle and the Mahaiwe theater.", "A short walk from Main Street, with Monument Mountain and Ski Butternut a few miles away."],
-    caution:"A real-estate listing for the inn appeared in my search, and I could not tell its date. Call before booking to confirm it is operating and who owns it.",
     src:[1,2],
     alts:[
       {n:"Granville House", d:"A lovingly restored B&B beside the Guthrie Center.", s:[3]},
@@ -575,7 +534,7 @@ const TOWNS = [
   stay:{
     name:"Kennebunkport Inn", url:"https://kennebunkportinn.com/", kind:"Victorian mansion turned inn, steps from Dock Square",
     why:["Dock Square is a one-minute walk, and the inn is open year-round with good off-season rates.", "A cozy three-story Victorian that began as a private mansion, named among Oyster’s coziest New England inns.", "Its Christmas season is described as lively and beautifully decorated."],
-    caution:"The inn’s restaurant and bar may only run on weekends in the off-season. Dock Square has plenty of other places to eat, but check which ones are open.",
+    caution:"The inn’s restaurant and bar may only run on weekends in the off-season. Dock Square has plenty of other places to eat.",
     src:[5,6],
     alts:[
       {n:"The Boathouse Waterfront Hotel", d:"On Ocean Avenue at the heart of Dock Square, with the “LOVE KPT” sign out front. Restaurant closed Mondays and some Tuesdays.", s:[10]},
@@ -640,7 +599,6 @@ const TOWNS = [
   stay:{
     name:"Captain’s House Inn", url:"https://www.captainshouseinn.com/", kind:"1839 Greek Revival inn on two acres of gardens",
     why:["Open year-round, and a member of Select Registry. Reviewers have called it perhaps Cape Cod’s finest bed and breakfast.", "Includes a gourmet breakfast, afternoon tea and evening snacks, and rates 9.8 out of 10 on Expedia across more than 200 reviews.", "Quiet, residential setting about half a mile from the fish pier."],
-    caution:"No guests under 10, and it is not on the waterfront. Rooms start around $329 in one listing, and holiday weekends will cost more.",
     src:[6,5,7,13],
     alts:[
       {n:"Chatham Bars Inn", d:"The grand 1914 beachfront resort, open year-round. It hands out hot chocolate at the tree lighting.", s:[8,2]},
@@ -808,7 +766,7 @@ function townHTML(t){
           </div>
           <dl class="facts">
             <div><dt>Best weekend</dt><dd>${esc(t.weekend)}</dd></div>
-            <div><dt>Drive from NYC</dt><dd>${esc(t.drive)} (my estimate)</dd></div>
+            <div><dt>Drive from NYC</dt><dd>${esc(t.drive)}</dd></div>
             <div><dt>Feel</dt><dd>${esc(t.feel)}</dd></div>
           </dl>
         </div>
@@ -830,9 +788,9 @@ function townHTML(t){
               <h3>${t.stay.url ? `<a href="${esc(t.stay.url)}" target="_blank" rel="noopener">${esc(t.stay.name)}<span class="sr"> (opens the inn’s website)</span></a>` : esc(t.stay.name)}</h3>
               <div class="kind">${esc(t.stay.kind)}${cites(t,t.stay.src)}</div>
               <ul>${stayWhy}</ul>
-              <div class="caution">${esc(t.stay.caution)}</div>
+              ${t.stay.caution ? `<div class="caution">${esc(t.stay.caution)}</div>` : ""}
             </div>
-            <div class="alts"><h4>Also worth a look</h4><ul>${alts}</ul></div>
+            <div class="alts"><h4>I’ll also consider</h4><ul>${alts}</ul></div>
           </div>
           <div role="tabpanel" id="pan-${t.id}-3" aria-labelledby="tab-${t.id}-3" hidden>
             <div class="chips" role="group" aria-label="Filter activities">${chips}</div>
